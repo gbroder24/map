@@ -65,5 +65,15 @@ console.log(studentsWithIds);
 const studentsObject = students.map(student => ({id: student.id, name: student.name}));
 console.log(studentsObject);
 
-const studentsAge = students.map(student => ({student.age = 36}));
+const studentsAge = students.map(student => {
+
+  if (student.id === 1) {
+    return { ...student, age: 32 };
+} else if (student.id === 2) {
+    return { ...student, age: 26 };
+} else if (student.id === 3) {
+  return { ...student, age: 28 };
+}
+  return student;
+});
 console.log(studentsAge);
